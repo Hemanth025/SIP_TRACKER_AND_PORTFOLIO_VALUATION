@@ -1,25 +1,31 @@
-const {Client} = require('pg');
+const { Pool } = require('pg');
 require('dotenv').config();
 
-const client = new Client({
+const pool = new Pool({
   host: process.env.PGHOST,
   port: process.env.PGPORT,
   user: process.env.PGUSER,
   password: process.env.PGPASSWORD,
   database: process.env.PGDATABASE
-})
+});
 
-async function run() {
+const query = (text, params) => pool.query(text, params);
+const connect = () => pool.connect();
+
+// Rename 'run' to something descriptive and don't call it globally
+async function connectDB() {
     try {
-        await client.connect();
+        const client = await pool.connect();
         console.log("Connected to POSTGRE.. ->SUPABASE");
-        const res = await client.query(`SELECT * FROM investors;`);
-        console.log(res.rows);
+        client.release(); // Very important: release the client back to the pool!
     } catch (error) {
-        console.log("Database Error: ");
-        console.log(error);
+        console.error("Database Connection Error:", error);
     }
 }
 
-run()
-module.exports = client;
+// Only run automatically if this file is executed directly (node pgManager.js)
+if (require.main === module) {
+    connectDB();
+}
+
+module.exports = { pool, query, connect, connectDB };

@@ -1,9 +1,19 @@
 const db = require('../utility/pgManager.js');
-const redisClient = require("../utility/redis.js");
+const {redisClient} = require("../utility/redis.js");
+const { getOrCreatePortfolioId } = require("../utility/portfolioManager.js");
 
 const createSIP = async (req, res) => {
     try {
-        const {investor_id, portfolio_id, fund_id, sip_amount, sip_date, start_date, end_date, sip_status} = req.body;
+        const investor_id = req.user.investorId;
+        const portfolio_id = await getOrCreatePortfolioId(investor_id);
+        const {fund_id, sip_amount, sip_date, start_date, end_date, sip_status = "ACTIVE"} = req.body;
+
+        if (!fund_id || !sip_amount || !sip_date || !start_date || !end_date) {
+            return res.status(400).json({
+                message: "Fund, SIP amount, SIP date, start date, and end date are required."
+            });
+        }
+
         const query = `INSERT INTO sips (investor_id, portfolio_id, fund_id, sip_amount, sip_date, start_date, end_date, sip_status) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING sip_id`;
         const result = await db.query(query, [investor_id, portfolio_id, fund_id, sip_amount, sip_date, start_date, end_date, sip_status]);
 
@@ -19,13 +29,16 @@ const createSIP = async (req, res) => {
 const getSipById = async (req, res) => {
     try{
         const sip_id = req.params.sip_id;
-        const cachedSip = redisClient.get(`sip_${sip_id}`);
+        const cachedSip = await redisClient.get(`sip_${sip_id}`);
         if(cachedSip){
             console.log("SIP fetched from Redis cache..");
             return res.status(200).json(JSON.parse(cachedSip));
         }
 
-        const query = `SELECT * FROM sips WHERE sip_id = $1`;
+        const query = `SELECT s.*, mf.fund_name FROM sips s 
+                        JOIN mutual_funds mf
+                        ON s.fund_id = mf.fund_id
+                        WHERE s.sip_id = $1`;
         const result = await db.query(query, [sip_id]);
         if(result.rows.length === 0){
             return res.status(400).json({message : "SIP Not Found.. "});
@@ -42,13 +55,47 @@ const getSipById = async (req, res) => {
     }
 }
 
+const getAllSIPs = async (req, res) => {
+
+    try {
+
+        const investorId = req.user.investorId;
+
+        const query = `
+            SELECT
+                s.*,
+                mf.fund_name
+            FROM sips s
+
+            JOIN mutual_funds mf
+            ON s.fund_id = mf.fund_id
+
+            WHERE s.investor_id = $1
+
+            ORDER BY s.created_at DESC
+        `;
+
+        const result =
+            await db.query(query, [investorId]);
+
+        return res.status(200).json(result.rows);
+
+    } catch(error){
+
+        return res.status(500).json({
+            message: "Error fetching SIPs",
+            error: error.message
+        });
+    }
+};
+
 const processSips = async (req, res) => {
     const client = await db.connect();
     try{
         const sip_id = req.params.sip_id;
         await client.query("BEGIN");
         const sipQuery = `SELECT * FROM sips WHERE sip_id = $1`;
-        const sipResult = db.query(sipQuery, [sip_id]);
+        const sipResult = await client.query(sipQuery, [sip_id]);
 
         if(sipResult.rows.length === 0){
             await client.query("ROLLBACK");
@@ -57,7 +104,7 @@ const processSips = async (req, res) => {
 
         const sip = sipResult.rows[0];
         const navQuery = `SELECT * FROM fund_nav_history WHERE fund_id = $1 ORDER BY nav_date DESC LIMIT 1`;
-        const navResult = db.query(navQuery, [sip.fund_id]);
+        const navResult = await client.query(navQuery, [sip.fund_id]);
 
         if(navResult.rows.length === 0){
             await client.query("ROLLBACK");
@@ -95,8 +142,8 @@ const processSips = async (req, res) => {
             await client.query(insertHoldingQuery, [sip.investor_id, sip.portfolio_id, sip.fund_id, units, nav.nav_value]);
         }
         await client.query("COMMIT");
-        await redisClient.del(`holdings_${investor_id}`);
-        await redisClient.del(`networth_${investor_id}`);
+        await redisClient.del(`holdings_${sip.investor_id}`);
+        await redisClient.del(`networth_${sip.investor_id}`);
         await redisClient.del(`sip_${sip_id}`)
         return res.status(200).json({message : "SIP Processed Successfully.. ", installment_id});
     }catch(err){
@@ -111,7 +158,7 @@ const processSips = async (req, res) => {
 const getSIPTransactions = async(req, res) => {
     try {
         const sip_id = req.params.sip_id;
-        const cachedTransactions = await redisClient.get(`transaction_${sip_id}`);
+        const cachedTransactions = await redisClient.get(`transactions_${sip_id}`);
         if(cachedTransactions){
             console.log("Transactions fetched from redis.");
             return res.status(200).json(JSON.parse(cachedTransactions));
@@ -128,13 +175,13 @@ const getSIPTransactions = async(req, res) => {
 
             FROM investment_transactions it
 
-            JOIN sips s
-            ON it.investor_id = s.investor_id
+            JOIN sip_installments si
+            ON it.installment_id = si.inst_id
 
             JOIN mutual_funds mf
             ON it.fund_id = mf.fund_id
 
-            WHERE s.sip_id = $1`;
+            WHERE si.sip_id = $1`;
         
         const result = await db.query(query, [sip_id]);
         await redisClient.set(
@@ -154,6 +201,7 @@ const getSIPTransactions = async(req, res) => {
 module.exports = {
     createSIP,
     getSipById,
+    getAllSIPs,
     processSips,
     getSIPTransactions
 }

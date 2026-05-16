@@ -1,9 +1,9 @@
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const db = require("../utility/pgManager.js");
-const generateToken  = require("../utility/authManager.js");
+const { generateToken }  = require("../utility/authManager.js");
 const {successResponse, errorResponse} = require("../utility/responseHandler.js")
-const redisClient = require("../utility/redis.js");
+const { redisClient } = require("../utility/redis.js");
 
 const JWT_SECRET = 'SPITRACKER_AND_PORTFOLIOVALUATION_AS_SECRET_KEY';
 
@@ -44,7 +44,7 @@ const login = async(req, res) => {
             return errorResponse(res, 400, "Email and Password are Required.. ");
         }
 
-        const cachedUser = await redisClient.get(`user_{email}`);
+        const cachedUser = await redisClient.get(`user_${email}`);
         let user;
         if(cachedUser){
             user = JSON.parse(cachedUser);
@@ -64,6 +64,8 @@ const login = async(req, res) => {
             );
         }
 
+        console.log(user.password);
+        
         const isMatch = await bcrypt.compare(password, user.password);
         if(!isMatch){
             return res.status(401).json({message : "Invalid Email or Password.. "});
@@ -117,6 +119,7 @@ const logout = async (req, res) => {
         return errorResponse(res, 500, err.message);
     }
 };
+
 
 module.exports = {
     register,

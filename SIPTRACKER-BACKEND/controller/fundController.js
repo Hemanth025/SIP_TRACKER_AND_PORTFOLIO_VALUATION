@@ -1,5 +1,5 @@
 const db = require('../utility/pgManager.js');
-const redisClient = require("../utility/redis.js");
+const { redisClient } = require("../utility/redis.js");
 
 const createFund = async(req, res) => {
     try{
@@ -8,7 +8,7 @@ const createFund = async(req, res) => {
         const result = await db.query(query, [amc_id, fund_name, fund_code, fund_type]);
 
         await redisClient.del("all_funds");
-        return res.status(201).json({message : "Fund Created Successfully.. ", fund_id : result.rows[0].fundId});
+        return res.status(201).json({message : "Fund Created Successfully.. ", fund_id : result.rows[0].fund_id});
     }catch(err){
         return res.status(500).json({message : "Error Creating Fund.. ", error : err.message});
     }
@@ -40,7 +40,7 @@ const getFunds = async(req, res) => {
 
 const updateFund = async(req, res) => {
     try{
-        const fund_id = req.params.fundId;
+        const fund_id = req.params.fund_id;
         const { nav_value, nav_date} = req.body;
         const query = `INSERT INTO fund_nav_history(fund_id, nav_value, nav_date) VALUES ($1, $2, $3) RETURNING nav_id`;
         const result = await db.query(query, [fund_id, nav_value, nav_date]);
