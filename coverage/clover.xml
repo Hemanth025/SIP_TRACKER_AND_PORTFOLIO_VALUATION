@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1778908382176" clover="3.2.0">
+  <project timestamp="1778908382176" name="All files">
+    <metrics statements="478" coveredstatements="403" conditionals="88" coveredconditionals="60" methods="60" coveredmethods="28" elements="626" coveredelements="491" complexity="0" loc="478" ncloc="478" packages="6" files="22" classes="22"/>
+    <package name="SIPTRACKER-BACKEND">
+      <metrics statements="29" coveredstatements="22" conditionals="4" coveredconditionals="1" methods="2" coveredmethods="1"/>
+      <file name="server.js" path="E:\WEB_DEVELOPMENT\SIP_TRACKER_AND_PORTFOLIO_VALUATION\SIPTRACKER-BACKEND\server.js">
+        <metrics statements="29" coveredstatements="22" conditionals="4" coveredconditionals="1" methods="2" coveredmethods="1"/>
+        <line num="1" count="13" type="stmt"/>
+        <line num="2" count="13" type="stmt"/>
+        <line num="3" count="13" type="stmt"/>
+        <line num="4" count="13" type="stmt"/>
+        <line num="5" count="13" type="stmt"/>
+        <line num="6" count="13" type="stmt"/>
+        <line num="7" count="13" type="stmt"/>
+        <line num="8" count="13" type="stmt"/>
+        <line num="9" count="13" type="stmt"/>
+        <line num="10" count="13" type="stmt"/>
+        <line num="12" count="13" type="stmt"/>
+        <line num="13" count="13" type="stmt"/>
+        <line num="15" count="13" type="stmt"/>
+        <line num="16" count="13" type="stmt"/>
+        <line num="17" count="13" type="stmt"/>
+        <line num="18" count="13" type="stmt"/>
+        <line num="19" count="13" type="stmt"/>
+        <line num="20" count="13" type="stmt"/>
+        <line num="22" count="13" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="31" count="13" type="stmt"/>
+        <line num="34" count="13" type="cond" truecount="1" falsecount="1"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="SIPTRACKER-BACKEND.controller">
+      <metrics statements="289" coveredstatements="289" conditionals="54" coveredconditionals="54" methods="24" coveredmethods="24"/>
+      <file name="InvestorController.js" path="E:\WEB_DEVELOPMENT\SIP_TRACKER_AND_PORTFOLIO_VALUATION\SIPTRACKER-BACKEND\controller\InvestorController.js">
+        <metrics statements="70" coveredstatements="70" conditionals="14" coveredconditionals="14" methods="5" coveredmethods="5"/>
+        <line num="1" count="13" type="stmt"/>
+        <line num="2" count="13" type="stmt"/>
+        <line num="3" count="13" type="stmt"/>
+        <line num="4" count="13" type="stmt"/>
+        <line num="5" count="13" type="stmt"/>
+        <line num="6" count="13" type="stmt"/>
+        <line num="7" count="13" type="stmt"/>
+        <line num="8" count="13" type="stmt"/>
+        <line num="11" count="13" type="stmt"/>
+        <line num="12" count="2972" type="stmt"/>
+        <line num="13" count="2972" type="stmt"/>
+        <line num="14" count="2972" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="2970" type="stmt"/>
+        <line num="16" count="2970" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="30" count="13" type="stmt"/>
+        <line num="31" count="4650" type="stmt"/>
+        <line num="32" count="4650" type="stmt"/>
+        <line num="34" count="4650" type="cond" truecount="2" falsecount="0"/>
+        <line num="35" count="2" type="stmt"/>
+        <line num="41" count="4648" type="stmt"/>
+        <line num="42" count="4647" type="cond" truecount="2" falsecount="0"/>
+        <line num="43" count="4642" type="stmt"/>
+        <line num="44" count="4642" type="stmt"/>
+        <line num="47" count="5" type="stmt"/>
+        <line num="64" count="5" type="stmt"/>
+        <line num="66" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="67" count="2" type="stmt"/>
+        <line num="74" count="2" type="stmt"/>
+        <line num="75" count="2" type="stmt"/>
+        <line num="76" count="2" type="stmt"/>
+        <line num="78" count="2" type="stmt"/>
+        <line num="82" count="13" type="stmt"/>
+        <line num="83" count="3" type="stmt"/>
+        <line num="84" count="3" type="stmt"/>
+        <line num="85" count="3" type="stmt"/>
+        <line num="87" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="88" count="1" type="stmt"/>
+        <line num="89" count="1" type="stmt"/>
+        <line num="92" count="2" type="stmt"/>
+        <line num="111" count="2" type="stmt"/>
+        <line num="113" count="1" type="stmt"/>
+        <line num="114" count="1" type="stmt"/>
+        <line num="116" count="1" type="stmt"/>
+        <line num="118" count="1" type="stmt"/>
+        <line num="122" count="13" type="stmt"/>
+        <line num="123" count="4" type="stmt"/>
+        <line num="124" count="4" type="stmt"/>
+        <line num="125" count="4" type="stmt"/>
+        <line num="127" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="128" count="1" type="stmt"/>
+        <line num="129" count="1" type="stmt"/>
+        <line num="132" count="3" type="stmt"/>
+        <line num="137" count="3" type="stmt"/>
+        <line num="139" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="140" count="1" type="stmt"/>
+        <line num="143" count="1" type="stmt"/>
+        <line num="144" count="1" type="stmt"/>
+        <line num="145" count="1" type="stmt"/>
+        <line num="148" count="1" type="stmt"/>
+        <line num="155" count="1" type="stmt"/>
+        <line num="159" count="1" type="stmt"/>
+        <line num="160" count="1" type="stmt"/>
+        <line num="162" count="1" type="stmt"/>
+        <line num="166" count="13" type="stmt"/>
+      </file>
+      <file name="authController.js" path="E:\WEB_DEVELOPMENT\SIP_TRACKER_AND_PORTFOLIO_VALUATION\SIPTRACKER-BACKEND\controller\authController.js">
+        <metrics statements="55" coveredstatements="55" conditionals="14" coveredconditionals="14" methods="3" coveredmethods="3"/>
+        <line num="1" count="12" type="stmt"/>
+        <line num="2" count="12" type="stmt"/>
+        <line num="3" count="12" type="stmt"/>
+        <line num="4" count="12" type="stmt"/>
+        <line num="5" count="12" type="stmt"/>
+        <line num="6" count="12" type="stmt"/>
+        <line num="8" count="12" type="stmt"/>
+        <line num="10" count="12" type="stmt"/>
+        <line num="11" count="4373" type="stmt"/>
+        <line num="12" count="4373" type="stmt"/>
+        <line num="13" count="4373" type="stmt"/>
+        <line num="14" count="4373" type="stmt"/>
+        <line num="16" count="4372" type="cond" truecount="2" falsecount="0"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="19" count="4369" type="stmt"/>
+        <line num="20" count="4369" type="stmt"/>
+        <line num="21" count="4369" type="stmt"/>
+        <line num="23" count="4369" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="33" count="4369" type="stmt"/>
+        <line num="40" count="12" type="stmt"/>
+        <line num="41" count="2014" type="stmt"/>
+        <line num="42" count="2014" type="stmt"/>
+        <line num="43" count="2014" type="cond" truecount="4" falsecount="0"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="47" count="2013" type="stmt"/>
+        <line num="49" count="2013" type="cond" truecount="2" falsecount="0"/>
+        <line num="50" count="2010" type="stmt"/>
+        <line num="51" count="2010" type="stmt"/>
+        <line num="54" count="3" type="stmt"/>
+        <line num="56" count="3" type="stmt"/>
+        <line num="57" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="58" count="1" type="stmt"/>
+        <line num="60" count="1" type="stmt"/>
+        <line num="61" count="1" type="stmt"/>
+        <line num="67" count="2011" type="stmt"/>
+        <line num="69" count="2011" type="stmt"/>
+        <line num="70" count="2011" type="cond" truecount="2" falsecount="0"/>
+        <line num="71" count="1" type="stmt"/>
+        <line num="74" count="2010" type="stmt"/>
+        <line num="79" count="2010" type="stmt"/>
+        <line num="87" count="2010" type="stmt"/>
+        <line num="98" count="1" type="stmt"/>
+        <line num="104" count="12" type="stmt"/>
+        <line num="105" count="3" type="stmt"/>
+        <line num="106" count="3" type="stmt"/>
+        <line num="107" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="108" count="1" type="stmt"/>
+        <line num="111" count="2" type="stmt"/>
+        <line num="112" count="2" type="stmt"/>
+        <line num="117" count="1" type="stmt"/>
+        <line num="119" count="1" type="stmt"/>
+        <line num="124" count="12" type="stmt"/>
+      </file>
+      <file name="dashboardController.js" path="E:\WEB_DEVELOPMENT\SIP_TRACKER_AND_PORTFOLIO_VALUATION\SIPTRACKER-BACKEND\controller\dashboardController.js">
+        <metrics statements="23" coveredstatements="23" conditionals="4" coveredconditionals="4" methods="6" coveredmethods="6"/>
+        <line num="1" count="12" type="stmt"/>
+        <line num="3" count="82255" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="12" type="stmt"/>
+        <line num="6" count="4569" type="stmt"/>
+        <line num="7" count="4569" type="stmt"/>
+        <line num="9" count="4569" type="stmt"/>
+        <line num="18" count="4569" type="stmt"/>
+        <line num="56" count="4569" type="stmt"/>
+        <line num="74" count="4569" type="stmt"/>
+        <line num="95" count="4569" type="stmt"/>
+        <line num="117" count="4569" type="stmt"/>
+        <line num="124" count="4568" type="stmt"/>
+        <line num="125" count="4568" type="stmt"/>
+        <line num="126" count="4568" type="stmt"/>
+        <line num="127" count="4568" type="stmt"/>
+        <line num="128" count="4568" type="stmt"/>
+        <line num="130" count="4568" type="stmt"/>
+        <line num="140" count="4568" type="stmt"/>
+        <line num="150" count="4576" type="stmt"/>
+        <line num="157" count="4575" type="stmt"/>
+        <line num="163" count="4568" type="stmt"/>
+        <line num="180" count="1" type="stmt"/>
+        <line num="186" count="12" type="stmt"/>
+      </file>
+      <file name="fundController.js" path="E:\WEB_DEVELOPMENT\SIP_TRACKER_AND_PORTFOLIO_VALUATION\SIPTRACKER-BACKEND\controller\fundController.js">
+        <metrics statements="34" coveredstatements="34" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+        <line num="1" count="12" type="stmt"/>
+        <line num="2" count="12" type="stmt"/>
+        <line num="4" count="12" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="17" count="12" type="stmt"/>
+        <line num="18" count="3134" type="stmt"/>
+        <line num="19" count="3134" type="stmt"/>
+        <line num="21" count="3134" type="cond" truecount="2" falsecount="0"/>
+        <line num="22" count="3131" type="stmt"/>
+        <line num="23" count="3131" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="34" count="2" type="stmt"/>
+        <line num="35" count="2" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="41" count="12" type="stmt"/>
+        <line num="42" count="3" type="stmt"/>
+        <line num="43" count="3" type="stmt"/>
+        <line num="44" count="3" type="stmt"/>
+        <line num="45" count="3" type="stmt"/>
+        <line num="46" count="3" type="stmt"/>
+        <line num="48" count="2" type="stmt"/>
+        <line num="49" count="2" type="stmt"/>
+        <line num="50" count="2" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="58" count="12" type="stmt"/>
+      </file>
+      <file name="profileController.js" path="E:\WEB_DEVELOPMENT\SIP_TRACKER_AND_PORTFOLIO_VALUATION\SIPTRACKER-BACKEND\controller\profileController.js">
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="12" type="stmt"/>
+        <line num="2" count="12" type="stmt"/>
+        <line num="4" count="12" type="stmt"/>
+        <line num="5" count="5237" type="stmt"/>
+        <line num="6" count="5237" type="stmt"/>
+        <line num="7" count="5237" type="stmt"/>
+        <line num="8" count="5236" type="stmt"/>
+        <line num="17" count="5236" type="stmt"/>
+        <line num="18" count="5235" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="30" count="12" type="stmt"/>
+      </file>
+      <file name="sipController.js" path="E:\WEB_DEVELOPMENT\SIP_TRACKER_AND_PORTFOLIO_VALUATION\SIPTRACKER-BACKEND\controller\sipController.js">
+        <metrics statements="94" coveredstatements="94" conditionals="20" coveredconditionals="20" methods="5" coveredmethods="5"/>
+        <line num="1" count="12" type="stmt"/>
+        <line num="2" count="12" type="stmt"/>
+        <line num="3" count="12" type="stmt"/>
+        <line num="5" count="12" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="11" count="3" type="cond" truecount="7" falsecount="0"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="29" count="12" type="stmt"/>
+        <line num="30" count="3084" type="stmt"/>
+        <line num="31" count="3084" type="stmt"/>
+        <line num="32" count="3084" type="stmt"/>
+        <line num="33" count="3084" type="cond" truecount="2" falsecount="0"/>
+        <line num="34" count="3081" type="stmt"/>
+        <line num="35" count="3081" type="stmt"/>
+        <line num="38" count="3" type="stmt"/>
+        <line num="42" count="3" type="stmt"/>
+        <line num="43" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
+        <line num="58" count="12" type="stmt"/>
+        <line num="60" count="3" type="stmt"/>
+        <line num="62" count="3" type="stmt"/>
+        <line num="64" count="3" type="stmt"/>
+        <line num="79" count="3" type="stmt"/>
+        <line num="81" count="2" type="stmt"/>
+        <line num="85" count="1" type="stmt"/>
+        <line num="92" count="12" type="stmt"/>
+        <line num="93" count="5" type="stmt"/>
+        <line num="94" count="5" type="stmt"/>
+        <line num="95" count="5" type="stmt"/>
+        <line num="96" count="5" type="stmt"/>
+        <line num="97" count="5" type="stmt"/>
+        <line num="98" count="5" type="stmt"/>
+        <line num="100" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="101" count="1" type="stmt"/>
+        <line num="102" count="1" type="stmt"/>
+        <line num="105" count="3" type="stmt"/>
+        <line num="106" count="3" type="stmt"/>
+        <line num="107" count="3" type="stmt"/>
+        <line num="109" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="110" count="1" type="stmt"/>
+        <line num="111" count="1" type="stmt"/>
+        <line num="114" count="2" type="stmt"/>
+        <line num="115" count="2" type="stmt"/>
+        <line num="117" count="2" type="stmt"/>
+        <line num="119" count="2" type="stmt"/>
+        <line num="121" count="2" type="stmt"/>
+        <line num="122" count="2" type="stmt"/>
+        <line num="124" count="2" type="stmt"/>
+        <line num="128" count="2" type="stmt"/>
+        <line num="129" count="2" type="stmt"/>
+        <line num="131" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="132" count="1" type="stmt"/>
+        <line num="133" count="1" type="stmt"/>
+        <line num="134" count="1" type="stmt"/>
+        <line num="136" count="1" type="stmt"/>
+        <line num="137" count="1" type="stmt"/>
+        <line num="140" count="1" type="stmt"/>
+        <line num="142" count="1" type="stmt"/>
+        <line num="144" count="2" type="stmt"/>
+        <line num="145" count="2" type="stmt"/>
+        <line num="146" count="2" type="stmt"/>
+        <line num="147" count="2" type="stmt"/>
+        <line num="148" count="2" type="stmt"/>
+        <line num="150" count="1" type="stmt"/>
+        <line num="151" count="1" type="stmt"/>
+        <line num="152" count="1" type="stmt"/>
+        <line num="154" count="5" type="stmt"/>
+        <line num="158" count="12" type="stmt"/>
+        <line num="159" count="4714" type="stmt"/>
+        <line num="160" count="4714" type="stmt"/>
+        <line num="161" count="4714" type="stmt"/>
+        <line num="162" count="4714" type="cond" truecount="2" falsecount="0"/>
+        <line num="163" count="4711" type="stmt"/>
+        <line num="164" count="4711" type="stmt"/>
+        <line num="167" count="3" type="stmt"/>
+        <line num="186" count="3" type="stmt"/>
+        <line num="187" count="2" type="stmt"/>
+        <line num="191" count="2" type="stmt"/>
+        <line num="193" count="2" type="stmt"/>
+        <line num="195" count="1" type="stmt"/>
+        <line num="201" count="12" type="stmt"/>
+      </file>
+      <file name="testing.js" path="E:\WEB_DEVELOPMENT\SIP_TRACKER_AND_PORTFOLIO_VALUATION\SIPTRACKER-BACKEND\controller\testing.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="SIPTRACKER-BACKEND.middlewares">
+      <metrics statements="15" coveredstatements="4" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="authMiddleware.js" path="E:\WEB_DEVELOPMENT\SIP_TRACKER_AND_PORTFOLIO_VALUATION\SIPTRACKER-BACKEND\middlewares\authMiddleware.js">
+        <metrics statements="15" coveredstatements="4" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="9" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="15" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="33" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="SIPTRACKER-BACKEND.model">
+      <metrics statements="33" coveredstatements="9" conditionals="8" coveredconditionals="0" methods="12" coveredmethods="0"/>
+      <file name="InvestorModel.js" path="E:\WEB_DEVELOPMENT\SIP_TRACKER_AND_PORTFOLIO_VALUATION\SIPTRACKER-BACKEND\model\InvestorModel.js">
+        <metrics statements="33" coveredstatements="9" conditionals="8" coveredconditionals="0" methods="12" coveredmethods="0"/>
+        <line num="1" count="13" type="stmt"/>
+        <line num="2" count="13" type="stmt"/>
+        <line num="3" count="13" type="stmt"/>
+        <line num="4" count="13" type="stmt"/>
+        <line num="7" count="13" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="20" count="13" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="33" count="13" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="37" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="46" count="13" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="50" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="60" count="13" type="stmt"/>
+      </file>
+    </package>
+    <package name="SIPTRACKER-BACKEND.routes">
+      <metrics statements="45" coveredstatements="45" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="InvestorRoutes.js" path="E:\WEB_DEVELOPMENT\SIP_TRACKER_AND_PORTFOLIO_VALUATION\SIPTRACKER-BACKEND\routes\InvestorRoutes.js">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="13" type="stmt"/>
+        <line num="2" count="13" type="stmt"/>
+        <line num="3" count="13" type="stmt"/>
+        <line num="5" count="13" type="stmt"/>
+        <line num="6" count="13" type="stmt"/>
+        <line num="7" count="13" type="stmt"/>
+        <line num="8" count="13" type="stmt"/>
+        <line num="10" count="13" type="stmt"/>
+      </file>
+      <file name="authRouter.js" path="E:\WEB_DEVELOPMENT\SIP_TRACKER_AND_PORTFOLIO_VALUATION\SIPTRACKER-BACKEND\routes\authRouter.js">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="13" type="stmt"/>
+        <line num="2" count="13" type="stmt"/>
+        <line num="3" count="13" type="stmt"/>
+        <line num="5" count="13" type="stmt"/>
+        <line num="6" count="13" type="stmt"/>
+        <line num="7" count="13" type="stmt"/>
+        <line num="9" count="13" type="stmt"/>
+      </file>
+      <file name="dashboardRouter.js" path="E:\WEB_DEVELOPMENT\SIP_TRACKER_AND_PORTFOLIO_VALUATION\SIPTRACKER-BACKEND\routes\dashboardRouter.js">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="13" type="stmt"/>
+        <line num="2" count="13" type="stmt"/>
+        <line num="4" count="13" type="stmt"/>
+        <line num="5" count="13" type="stmt"/>
+        <line num="7" count="13" type="stmt"/>
+        <line num="9" count="13" type="stmt"/>
+      </file>
+      <file name="fundRouter.js" path="E:\WEB_DEVELOPMENT\SIP_TRACKER_AND_PORTFOLIO_VALUATION\SIPTRACKER-BACKEND\routes\fundRouter.js">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="13" type="stmt"/>
+        <line num="2" count="13" type="stmt"/>
+        <line num="3" count="13" type="stmt"/>
+        <line num="4" count="13" type="stmt"/>
+        <line num="6" count="13" type="stmt"/>
+        <line num="7" count="13" type="stmt"/>
+        <line num="8" count="13" type="stmt"/>
+        <line num="10" count="13" type="stmt"/>
+      </file>
+      <file name="profileRouter.js" path="E:\WEB_DEVELOPMENT\SIP_TRACKER_AND_PORTFOLIO_VALUATION\SIPTRACKER-BACKEND\routes\profileRouter.js">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="13" type="stmt"/>
+        <line num="2" count="13" type="stmt"/>
+        <line num="4" count="13" type="stmt"/>
+        <line num="5" count="13" type="stmt"/>
+        <line num="7" count="13" type="stmt"/>
+        <line num="9" count="13" type="stmt"/>
+      </file>
+      <file name="sipRoutes.js" path="E:\WEB_DEVELOPMENT\SIP_TRACKER_AND_PORTFOLIO_VALUATION\SIPTRACKER-BACKEND\routes\sipRoutes.js">
+        <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="13" type="stmt"/>
+        <line num="2" count="13" type="stmt"/>
+        <line num="3" count="13" type="stmt"/>
+        <line num="4" count="13" type="stmt"/>
+        <line num="6" count="13" type="stmt"/>
+        <line num="7" count="13" type="stmt"/>
+        <line num="8" count="13" type="stmt"/>
+        <line num="9" count="13" type="stmt"/>
+        <line num="10" count="13" type="stmt"/>
+        <line num="12" count="13" type="stmt"/>
+      </file>
+    </package>
+    <package name="SIPTRACKER-BACKEND.utility">
+      <metrics statements="67" coveredstatements="34" conditionals="18" coveredconditionals="5" methods="21" coveredmethods="3"/>
+      <file name="authManager.js" path="E:\WEB_DEVELOPMENT\SIP_TRACKER_AND_PORTFOLIO_VALUATION\SIPTRACKER-BACKEND\utility\authManager.js">
+        <metrics statements="8" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="12" type="stmt"/>
+        <line num="2" count="12" type="stmt"/>
+        <line num="3" count="12" type="stmt"/>
+        <line num="6" count="12" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="16" count="12" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="23" count="12" type="stmt"/>
+      </file>
+      <file name="dbManager.js" path="E:\WEB_DEVELOPMENT\SIP_TRACKER_AND_PORTFOLIO_VALUATION\SIPTRACKER-BACKEND\utility\dbManager.js">
+        <metrics statements="8" coveredstatements="5" conditionals="6" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="1" count="13" type="stmt"/>
+        <line num="3" count="13" type="stmt"/>
+        <line num="7" count="12" type="cond" truecount="1" falsecount="1"/>
+        <line num="9" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="15" count="12" type="cond" truecount="1" falsecount="1"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="23" count="13" type="stmt"/>
+      </file>
+      <file name="pgManager.js" path="E:\WEB_DEVELOPMENT\SIP_TRACKER_AND_PORTFOLIO_VALUATION\SIPTRACKER-BACKEND\utility\pgManager.js">
+        <metrics statements="13" coveredstatements="7" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="0"/>
+        <line num="1" count="7" type="stmt"/>
+        <line num="2" count="7" type="stmt"/>
+        <line num="4" count="7" type="stmt"/>
+        <line num="12" count="7" type="stmt"/>
+        <line num="13" count="7" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="27" count="7" type="cond" truecount="1" falsecount="1"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="31" count="7" type="stmt"/>
+      </file>
+      <file name="portfolioManager.js" path="E:\WEB_DEVELOPMENT\SIP_TRACKER_AND_PORTFOLIO_VALUATION\SIPTRACKER-BACKEND\utility\portfolioManager.js">
+        <metrics statements="8" coveredstatements="3" conditionals="3" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="3" count="11" type="cond" truecount="0" falsecount="1"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="9" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="21" count="11" type="stmt"/>
+      </file>
+      <file name="redis.js" path="E:\WEB_DEVELOPMENT\SIP_TRACKER_AND_PORTFOLIO_VALUATION\SIPTRACKER-BACKEND\utility\redis.js">
+        <metrics statements="25" coveredstatements="8" conditionals="5" coveredconditionals="0" methods="12" coveredmethods="0"/>
+        <line num="1" count="7" type="stmt"/>
+        <line num="3" count="7" type="stmt"/>
+        <line num="10" count="7" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="14" count="7" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="18" count="7" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="28" count="7" type="cond" truecount="0" falsecount="1"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="41" count="7" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="53" count="7" type="stmt"/>
+      </file>
+      <file name="responseHandler.js" path="E:\WEB_DEVELOPMENT\SIP_TRACKER_AND_PORTFOLIO_VALUATION\SIPTRACKER-BACKEND\utility\responseHandler.js">
+        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="1" count="13" type="stmt"/>
+        <line num="8" count="6655" type="stmt"/>
+        <line num="16" count="13" type="stmt"/>
+        <line num="22" count="7" type="stmt"/>
+        <line num="29" count="13" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
